@@ -9,23 +9,26 @@ class Triangulo {
 
 class Circulo {
     constructor() {
-        console.log("🔵 I guees we're doing circles now")
+        console.log("🔵 I guess we're doing circles now")
         this.nombre = 'Circulo';
     }
 }
 
 class Factory {
     static crear() {
-        if(Math.floor(Math.random() * 100 > 0))
-            return new Triangulo;
+        if(Math.floor(Math.random() * 20) == 1)
+            return new Circulo;
 
-        return new Circulo
+        return new Triangulo
     }
 }
 
 setTimeout(()=>{Factory.crear()}, 100)
-
-/*
-while(true){
-    setTimeout(()=>{Fa}, 1)
-}*/
+setTimeout(()=>{Factory.crear()}, 100)
+setTimeout(()=>{Factory.crear()}, 100)
+setTimeout(()=>{Factory.crear()}, 100)
+setTimeout(()=>{Factory.crear()}, 100)
+setTimeout(()=>{Factory.crear()}, 100)
+setTimeout(()=>{Factory.crear()}, 100)
+setTimeout(()=>{Factory.crear()}, 100)
+setTimeout(()=>{Factory.crear()}, 100)
