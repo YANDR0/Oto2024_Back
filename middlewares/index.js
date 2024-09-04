@@ -8,8 +8,7 @@ const port = process.env.PORT || 3000;
 
 app.use(userRoutes);
 
-app.use('/public', express.static(path.join(__dirname, 'assets')), (req, res) => {
-})
+app.use('/public', express.static(path.join(__dirname, 'assets')))
 
 app.get('', (req, res) => {
     const url = path.join(__dirname, 'src', 'views', 'index.html')
