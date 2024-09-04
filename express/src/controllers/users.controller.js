@@ -1,10 +1,9 @@
+const user = require('./../models/user')
+
 class UsersController {
     getAll(req, res) {
-        res.send([{
-            id: 1,
-            name: 'Juan Perez'
-        }])
-
+        const users = user.find()
+        res.send(users)
     }
 
     getById(req, res) {

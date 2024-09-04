@@ -1,0 +1,4 @@
+
+cliente <-----> [rutas] <-----> [controlador] <-----> [modelos] <-----> base
+
+index.js <-----> routes/index.js <-----> routes/ruta <-----> controllers/controlador <-----> models/modelos
