@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const routes = require('./src/routes');
 
@@ -5,7 +6,6 @@ const port = process.env.PORT || 3000;
 const nodeEnv = process.env.NODE_ENV;
 
 const app = express();
-
 app.use(routes)
 
 if(nodeEnv === 'dev'){
@@ -13,6 +13,8 @@ if(nodeEnv === 'dev'){
         res.send('0.0.1')
     })
 }
+
+console.log(SECRET_KEY)
 
 app.listen(port, function() {
     console.log(`App está escuchando en el puerto ${port}`) 
