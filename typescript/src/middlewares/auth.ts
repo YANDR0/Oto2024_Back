@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { User } from "../types/user";
+import { User, Express } from "../types/user";
+
 
 const secretKey = '12345'
 
