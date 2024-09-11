@@ -1,33 +1,16 @@
-import express, {Request, Response} from 'express';
+import express from 'express';
+import routes from './routes';
 
+const port = process.env.PORT || 3000
 const app = express()
 
-const port = process.env.PORT || 3001
-
-app.get('', (req:Request, res:Response) => {
+app.get('', (req, res) => {
     res.send('Api Works!')
 })
+
+app.use(routes);
 
 app.listen(port, () => {
     console.log(`App is running in port ${port}`)
 })
 
-
-
-/*
-  Error por tipo de dato
-let nombre:string = 'Juan'
-nombre = 5
-
-
-class Persona{
-    nombre:string;
-
-    constructor(nombre:string){
-        this.nombre = nombre;
-    }
-}
-
-const yo = new Persona('Juan');
-console.log(yo.nombre)
-*/
