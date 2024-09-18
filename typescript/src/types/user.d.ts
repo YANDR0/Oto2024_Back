@@ -1,3 +1,4 @@
+
 export interface User {
     id?: string;
     name: string;
@@ -6,8 +7,10 @@ export interface User {
     
 }
 
-declare namespace Express {
-    export interface Request{
-        user?: User
+declare global{
+    namespace Express {
+        export interface Request{
+            user?: User
+        }
     }
 }
